@@ -1,0 +1,294 @@
+body {
+  padding: 30px 120px; /* adds space around the whole page;
+( top/bottom , left/right )*/
+  margin: 0;
+  background-color: #f9f4e8;
+}
+ul {
+  padding-left: 0; /* removes unwanted left space when using lists */
+}
+
+li {
+  list-style: none; /* removes bullets*/
+}
+a {
+  text-decoration: none; /*to remove underline below */
+  color: rgb(58, 58, 58);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+input,
+.sub-header p,
+button {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+header {
+  display: flex;
+  /*----*/
+  width: 50%; /* set to 50; automatically positions to half the screen*/
+  margin: auto; /* centers horizontally*/
+  /* The element will then take up the specified width, 
+    and the remaining space will be split equally 
+    between the left and right margins. */
+  /*----*/
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .companyLogo-button {
+  display: flex;
+  /* div is defaulted to a display:'block'
+     resulting in mis-aligned items*/
+  margin-left: -50%;
+  align-items: center;
+  /* centers both the logo and the button */
+}
+
+header .companyLogo-button #company-logo {
+  height: 100%;
+}
+
+header .companyLogo-button button {
+  border: none;
+  border-radius: 100px;
+  padding: 5px 15px;
+  color: aliceblue;
+  background: linear-gradient(95deg, rgb(240, 181, 21), rgb(228, 59, 59));
+  margin-left: 20px;
+}
+
+header nav ul {
+  display: flex;
+  column-gap: 20px; /* adds a gap between the child items*/
+}
+
+header .sign-in-join {
+  margin-right: -50%;
+}
+
+header .sign-in-join a {
+  margin-right: 20px; /* add space between the two elements */
+}
+
+header .sign-in-join button {
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  color: aliceblue;
+  background-color: rgb(82, 82, 253);
+}
+
+header .icon {
+  display: none;
+}
+main {
+  display: flex;
+  justify-content: space-between; /* ensures that they appear at the ends*/
+  margin: 150px 0;
+}
+
+main .main-texts {
+  width: 48%;
+  /* occupies 50% of the left-side main div*/
+  /* to make room for the imgs div*/
+  align-items: center;
+}
+
+main .main-texts :is(h4, p) {
+  color: rgb(58, 58, 58);
+}
+
+main .main-texts h1 {
+  width: 95%;
+  margin-bottom: 0.2em;
+  font-size: 3.5em;
+}
+
+main .main-texts h4 {
+  width: 85%;
+  margin-top: 0;
+  font-size: 1em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  word-spacing: 0.2em;
+}
+
+main .main-texts .form-input-button {
+  display: flex;
+  width: 85%; /* occupy 100% of the div width */
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .main-texts .form-input-button form {
+  width: 60%;
+}
+
+main .main-texts .form-input-button form input {
+  /* inside of text input*/
+  width: 100%;
+  padding: 20px; /* expands space around the text*/
+  background-color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+main .main-texts .form-input-button button {
+  width: 30%;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: rgb(82, 82, 253);
+}
+
+main .sub-header {
+  display: flex;
+  width: 55%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .imgs {
+  display: flex;
+  position: relative;
+  /* to contain the imgs within the .imgs div*/
+  width: 48%;
+  /* declared width for the img*/
+  justify-content: flex-end;
+  /* works with display flex and puts content at the end*/
+  align-items: center;
+}
+
+main .imgs img {
+  position: absolute;
+  width: 65%; /* adjusts the size of all the images*/
+}
+
+main .imgs #purple-shape {
+  /* no need to add the img tag, 
+    just go with the id since it's more specific */
+  transform: rotate(-15deg);
+  /* transform: rotate(0deg);
+     + : clockwise ; - : counter-clockwise */
+}
+
+main .imgs #pink-shape {
+  transform: rotate(-30deg);
+}
+
+main .imgs #blue-shape {
+  transform: rotate(-45deg);
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .soc-links ul {
+  display: flex;
+  column-gap: 20px;
+}
+
+footer .specialist {
+  display: flex;
+  align-items: center;
+}
+
+footer .specialist img {
+  margin-right: 20px;
+}
+
+footer .specialist .specialist-texts p {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px 50px;
+  }
+
+  header {
+    position: relative;
+    width: 100%;
+  }
+
+  header .companyLogo-button {
+    margin: 0;
+  }
+
+  header .icon {
+    display: flex;
+    font-size: 1.5em;
+  }
+
+  header nav,
+  .sign-in-join {
+    display: none;
+  }
+
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+  }
+
+  main .main-texts,
+  main .imgs {
+    width: 100%;
+    /* occupies the every available space compared to 
+       the desktop-view */
+  }
+
+  main .main-texts .headers h4 {
+    width: 100%;
+  }
+
+  main .imgs {
+    justify-content: center;
+  }
+  main .imgs #model-img {
+    position: relative;
+    /* positions the img to its normal flow*/
+  }
+
+  @media screen and (max-width: 480px) {
+    main {
+      margin: 20px 0;
+    }
+    main .main-texts .form-input-button {
+      width: 100%;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    main .main-texts .form-input-button form {
+      width: 100%;
+    }
+
+    main .main-texts .form-input-button form input {
+      /* white space inside form*/
+      padding: 20px 0;
+    }
+
+    main .main-texts .form-input-button button {
+      width: 100%;
+    }
+
+    main .main-texts .sub-header {
+      width: 100%;
+    }
+
+    footer {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+}
